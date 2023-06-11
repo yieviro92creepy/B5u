@@ -1,0 +1,29 @@
+execute in shop!!!!!
+
+-- Will spend your knobs!
+
+--// Change values only here
+
+local item = "Lockpick" -- Name of item to multiple buy. Lighter, Flashlight, Lockpick, Vitamins
+
+local giveitems = 3 -- How many times buy selected item
+
+ 
+
+ 
+
+--// DONT TOUCH
+
+local args = {}
+
+local e = 1
+
+repeat
+
+table.insert(args, e, item)
+
+e += 1
+
+until e > giveitems
+
+game:GetService("ReplicatedStorage").EntityInfo.PreRunShop:FireServer({unpack(args)})
